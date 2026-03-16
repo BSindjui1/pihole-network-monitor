@@ -303,7 +303,7 @@ curl -sSL https://install.pi-hole.net | bash
 
 ## 🌐 How It Works
 
-![Network Diagram](screenshots/network-diagram.png)
+![Network Diagram](screenshots/network-diagram.svg)
 
 Every device on the network sends DNS queries to the router. The router forwards all DNS traffic to Pi-hole. Pi-hole checks each domain against its blocklist (81,131 domains) — blocked domains get an immediate `NXDOMAIN` response so the ad or tracker never loads. Allowed domains are forwarded to upstream resolvers (Google 8.8.8.8 or Cloudflare 1.1.1.1, both with DNSSEC) and the real IP is returned normally. No per-device configuration is needed.
 
