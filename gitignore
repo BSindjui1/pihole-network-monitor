@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Sensitive files — never commit these
+pihole.toml.bak
+*.pem
+*.key
