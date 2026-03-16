@@ -246,7 +246,7 @@ Pi-hole running on **Core v6.3**, blocking enabled, with **81,131 gravity domain
 
 | Component | Details |
 |---|---|
-| Device | Raspberry Pi (hostname: `PakisPI`) |
+| Device | Raspberry Pi (hostname: `User`) |
 | Architecture | `linux/arm64/v8` |
 | OS | Raspberry Pi OS |
 | Storage | MicroSD |
