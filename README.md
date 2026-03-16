@@ -84,6 +84,13 @@ See [`config/pihole.toml`](config/pihole.toml) for the full annotated configurat
 
 ---
 
+## 🖥️ System Health
+
+![System Health](screenshots/pihole-system-health.png)
+*CPU temperature, memory usage, disk, and uptime captured directly from the Pi — confirming the full stack runs comfortably within hardware limits at 47.2°C and 27% memory usage.*
+
+---
+
 ## 📂 Repository Structure
 
 ```
@@ -101,6 +108,7 @@ pihole-network-monitor/
     ├── pihole-dns-upstream-servers.png
     ├── pihole-listening-ports.png
     ├── pihole-command-line.png
+    ├── pihole-system-health.png
     └── network-diagram.svg
 ```
 
@@ -157,6 +165,17 @@ After running Pi-hole for 24 hours across 7 active clients:
 - **Network felt noticeably faster** — eliminating DNS lookups for blocked domains removes a layer of latency that adds up across hundreds of queries per hour.
 - **Pi-hole also acts as the DHCP server** — centralizing both DNS and DHCP on one device simplified network management and gave full visibility into every client on the network by hostname.
 - **Three bypass methods were explicitly blocked** — Firefox DNS-over-HTTPS, Apple iCloud Private Relay, and Discovery of Designated Resolvers were all configured to prevent devices from routing around Pi-hole without my knowledge.
+
+---
+
+## 🎓 What I Learned
+
+- **DNS and how the internet actually works** — setting up Pi-hole required understanding the full DNS resolution chain, from device query to upstream resolver to returned IP, and where interception is possible at each step.
+- **Linux administration** — managing a 24/7 service via systemd, checking logs, configuring network interfaces, and using the command line as the primary interface rather than a GUI.
+- **Network security thinking** — actively blocking three DNS bypass mechanisms (Firefox DoH, iCloud Private Relay, DDR) taught me that security isn't just about blocking threats, it's about controlling the paths traffic can take.
+- **Reading and modifying config files** — working through `pihole.toml` to understand what each setting does and intentionally changing eight defaults to harden the setup.
+- **Privacy by design** — setting privacy level 1 to hide domain names in logs, understanding the tradeoff between visibility and privacy, and making a deliberate choice rather than accepting defaults.
+- **Troubleshooting real systems** — debugging port conflicts, permission errors reading config files, and SCP authentication issues reinforced that working with real infrastructure never goes exactly as documented.
 
 ---
 
