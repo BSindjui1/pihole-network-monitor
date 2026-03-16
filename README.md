@@ -12,6 +12,18 @@ I'm a Computer Science student with a passion for exploring technology at every 
 
 ---
 
+## 📊 Live Stats
+
+| Metric | Value |
+|---|---|
+| Total DNS Queries | 21,688 |
+| Queries Blocked | 3,469 |
+| Block Rate | 16.0% |
+| Domains on Blocklist | 79,079 |
+| Active Clients | 7 |
+
+---
+
 ## 🔍 What Is Pi-hole?
 
 Pi-hole is a network-level ad blocker that acts as a **DNS sinkhole** — intercepting DNS queries from every device on your network and blocking requests to known ad-serving, tracking, and malicious domains. Unlike browser extensions, Pi-hole works on **all devices and all apps**, including phones, smart TVs, and IoT devices — with zero configuration on each device.
@@ -44,7 +56,7 @@ Every device on the network sends DNS queries to the router. The router forwards
 
 | Component | Details |
 |---|---|
-| Device | Raspberry Pi (hostname: `User`) |
+| Device | Raspberry Pi (hostname: `PakisPI`) |
 | Architecture | `linux/arm64/v8` |
 | OS | Raspberry Pi OS |
 | Storage | MicroSD |
@@ -89,7 +101,7 @@ pihole-network-monitor/
     ├── pihole-dns-upstream-servers.png
     ├── pihole-listening-ports.png
     ├── pihole-command-line.png
-    └── network-diagram.png
+    └── network-diagram.svg
 ```
 
 ---
@@ -148,19 +160,6 @@ After running Pi-hole for 24 hours across 7 active clients:
 
 ---
 
-## 📊 Live Stats
-
-| Metric | Value |
-|---|---|
-| Total DNS Queries | 21,688 |
-| Queries Blocked | 3,469 |
-| Block Rate | 16.0% |
-| Domains on Blocklist | 79,079 |
-| Active Clients | 7 |
-
-
----
-
 ## 📚 Resources
 
 - [Pi-hole Documentation](https://docs.pi-hole.net/)
@@ -173,6 +172,3 @@ After running Pi-hole for 24 hours across 7 active clients:
 ## 📄 License
 
 This project documentation is open source. Pi-hole itself is licensed under the [EUPL](https://github.com/pi-hole/pi-hole/blob/master/LICENSE).
-
-
-
